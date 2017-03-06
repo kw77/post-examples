@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Example Form</title>
+    <script src="/static/js/index.js"></script>
+    <script src="/static/js/superagent.min.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+</head>
+<body>
+
+<h1>Example POST from Client Browser</h1>
+<form id="form1" name="form1" action="/url-enc-form" method="post" enctype="application/x-www-form-urlencoded">
+    <fieldset>
+    <legend>Form 1 - URL Encoding:</legend>
+        <label for="value1">Name:</label>
+        <input type="text" id="value1" name="value1"><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+
+<form id="form2" name="form2" action="/multi-part-form" method="post" enctype="multipart/form-data">
+    <fieldset>
+    <legend>Form 2 - Multipart Form Data Encoding:</legend>
+        <label for="value2">Name:</label>
+        <input type="text" id="value2" name="value2"><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+
+<form id="form3" name="form3" action="/multi-part-with-file" method="post" enctype="multipart/form-data">
+    <fieldset>
+    <legend>Form 3 - Multipart Form Data, inc. File:</legend>
+        <label for="value3">Name:</label>
+        <input type="text" id="value3" name="value3"><br>
+        <input type="file" id="file3"  name="file3"><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+
+<form id="form4" name="form4" action="/multi-part-to-memory" method="post" enctype="multipart/form-data">
+    <fieldset>
+    <legend>Form 4 - Multipart Form Data, inc. File... to memory only:</legend>
+        <label for="value4">Name:</label>
+        <input type="text" id="value4" name="value4"><br>
+        <input type="file" id="file4"  name="file4"><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+
+<form id="form5" name="form5">
+    <fieldset>
+        <legend>Form 5 - Send Form Values as JSON Data:</legend>
+        <label for="value5">Name:</label>
+        <input type="text" id="value5" name="value5"><br>
+        <button type="button" onclick="postJSON()">Send</button>
+    </fieldset>
+</form>
+
+
+</body>
+</html>
